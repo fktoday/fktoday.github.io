@@ -1,0 +1,12 @@
+[
+    {
+       "name":"GUI-pinyin",
+       "url":"https://github.com/fktoday/GUI-pinyin/",
+       "desc":"利用PyQt和pypinyin制作汉字转拼音软件"
+    },
+    {
+       "name":"tianhei.asia",
+       "url":"http://tianhei.asia/",
+       "desc":"Another blog"
+    }
+]
