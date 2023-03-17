@@ -1,2 +1,9 @@
-
+public/
 .DS_Store
+.deploy_git/
+node_modules/
+.deploy*/
+_multiconfig.yml
+Thumbs.db
+db.json
+*.log
