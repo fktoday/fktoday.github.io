@@ -5,7 +5,7 @@
 # Site
 title: 996.school
 subtitle: '上学996，放学ICU'
-description: '上学996，放学ICU。不学习何来福报，惟奋斗遍览深宵。白日上课需瞪眼，青春成眠好留涎。愿天下师生福报满满，收获满满！'
+description: '上学996，放学ICU。不学习何来福报，惟奋斗遍览深宵。白日上课需瞪眼，青春成眠好流涎。愿天下师生福报满满，收获满满！'
 keywords: 996，ICU
 author: Huan.
 language: en
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://996.school
 permalink: :year/:month:day:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -109,3 +109,8 @@ deploy:
 abbrlink: 
 alg: crc16 #算法选项：crc16丨crc32
 rep: dec #输出进制：dec为十进制，hex为十六进制
+
+Plugins:
+- hexo-generator-baidu-sitemap
+baidusitemap:
+    path: baidusitemap.xml
