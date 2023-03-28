@@ -9,11 +9,13 @@
     <meta name="baidu-site-verification" content="codeva-sD1W2GfP2s" />
     <meta name="description" content="上学996，放学ICU。不学习何来福报，惟奋斗遍览深宵。白日上课需瞪眼，青春成眠好流涎。愿天下师生福报满满，收获满满！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="996.school">
-<meta property="og:url" content="http://996.school/archives/index.html">
+<meta property="og:title" content="Search">
+<meta property="og:url" content="http://996.school/search/index.html">
 <meta property="og:site_name" content="996.school">
 <meta property="og:description" content="上学996，放学ICU。不学习何来福报，惟奋斗遍览深宵。白日上课需瞪眼，青春成眠好流涎。愿天下师生福报满满，收获满满！">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-28T03:01:59.169Z">
+<meta property="article:modified_time" content="2023-03-28T03:01:28.905Z">
 <meta property="article:author" content="Huan.">
 <meta property="article:tag" content="996，ICU">
 <meta name="twitter:card" content="summary">
@@ -36,7 +38,7 @@
       
     
     <!-- title -->
-    <title>Writing</title>
+    <title>Search</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -90,162 +92,22 @@
 </header>
 
         
-        <div id="archive">
-  <ul class="post-list">
-    
-    
-    
-    
-      
-      
-      
-      
-        <li class="post-year"><h2>2023</h2></li>
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-27T12:31:29.000Z" itemprop="datePublished">2023-03-27</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/032758189.html">教材古诗文原文-八下</a>
-    
-
-
-</span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-27T02:48:13.000Z" itemprop="datePublished">2023-03-27</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/032742812.html">语法——复句</a>
-    
-
-
-</span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-21T23:50:06.000Z" itemprop="datePublished">2023-03-22</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/032240920.html">驳赵家村工作报告——一场彻底的政治作秀</a>
-    
-
-
-</span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-21T00:13:38.000Z" itemprop="datePublished">2023-03-21</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/032139148.html">统编本语文教材成语集合（待更新）</a>
-    
-
-
-</span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-20T00:08:31.000Z" itemprop="datePublished">2023-03-20</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/032059449.html">德育情景剧——密室体验10min</a>
-    
-
-
-</span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="post-item">
-        
-    <div class="meta">
-      
-        
-          <time datetime="2023-03-19T15:22:10.000Z" itemprop="datePublished">2023-03-19</time>
-        
-      
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/03191040.html">德育校园情景剧剧本-10min</a>
-    
-
-
-</span>
-      </li>
-    
-  </ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   
 
-</div>
+  <div class="content" itemprop="articleBody">
+      
+        <section id="search">
+  <form>
+    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+  </form>
+  <div id="search-result"></div>
+  <p class="search-no-result">No results found.</p>
+</section>
+
+      
+  </div>
+</article>
 
         
         <footer id="footer">
@@ -300,6 +162,45 @@
 <script src="/js/main.js"></script>
 
 <!-- search -->
+
+  
+<script src="/js/search.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+
+    var $inputArea = $("input#search-input");
+    var $resultArea = document.querySelector("div#search-result");
+
+    $inputArea.focus(function() {
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'search-input', 'search-result');
+    });
+
+    $inputArea.keydown(function(e) {
+      if (e.which == 13) {
+        e.preventDefault();
+      }
+    });
+
+    var observer = new MutationObserver(function(mutationsList, observer) {
+      if (mutationsList.length == 1) {
+        if (mutationsList[0].addedNodes.length) {
+          $(".search-no-result").hide();
+        } else if (mutationsList[0].removedNodes.length) {
+          $(".search-no-result").show(200);
+        }
+      }
+    });
+
+    observer.observe($resultArea, { childList: true });
+
+  });
+  </script>
 
 <!-- Google Analytics -->
 
