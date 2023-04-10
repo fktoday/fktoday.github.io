@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>默写卷生成器</title>
+      <link href="/2023/041045424.html"/>
+      <url>/2023/041045424.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="GUI-MoXie"><a href="#GUI-MoXie" class="headerlink" title="GUI-MoXie"></a>GUI-MoXie</h1><p>默写卷生成器，自动为古诗文生成带画线句的默写卷：→<a href="https://github.com/fktoday/GUI-MoXie/">传送门</a></p><p><img src="https://cdn.jsdelivr.net/gh/fktoday/images@main/HEXO/iShot_2023-04-10_08.00.19.gif"></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>pip install PyQt5</code></p><p><code>pip install PyQt5-tools</code></p><p><code>pip install PyQt5designer</code></p><h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><p><code>pip install pyinstaller</code></p><p><code>pyinstaller -F -w main.py</code></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol><li>将古诗文复制进文本框中。</li><li>输入古诗文本身所含所有标点符号，例如“，。：”。</li><li>点击“奇数句留空”或“偶数句留空”，生成的结果即可复制。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 默写 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《义务教育语文课程标准（2022版）》</title>
       <link href="/2023/032914259.html"/>
       <url>/2023/032914259.html</url>
